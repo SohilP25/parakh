@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+*{
+  font-family: 'Lexend Deca', sans-serif;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flowbite-input:focus {
+  /* Your custom focus styles here */
+  border-color: #6bde3b; /* Change the border color on focus */
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 5px #6bde3b; /* Add a custom focus shadow */
+}
+.flowbite-input:hover {
+  /* Your custom focus styles here */
+  border-color: #6bde3b; /* Change the border color on focus */
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 5px #6bde3b; /* Add a custom focus shadow */
+}
+.opthov:hover{
+  background-color : rgba(107, 222, 59, 0.25);;
+  text-color: white;
+}
+.selected{
+  background-color : rgba(107, 222, 59, 0.25);;
+  text-color: white;
+}
