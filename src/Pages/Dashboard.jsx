@@ -68,8 +68,8 @@ const Dashboard = () => {
     } else if (curntDiff === -1) {
       alert("Select Difficulty");
       setLoading(false);
-    } else if (totalCount < 3) {
-      alert("Number of questions can't be zero, it should be at least 10");
+    } else if (totalCount < 4) {
+      alert("Number of questions must be four or greater than that");
       setLoading(false);
     } else {
       setCsvData(csvData.concat("Question,OptionA,OptionB,OptionC,OptionD,CorrectAns,SelectedAns,TimeTaken,CurDiff\n"));
