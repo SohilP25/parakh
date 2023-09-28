@@ -4,65 +4,65 @@ import { DataState } from "../Context/DataProvider.js";
 
 const Result = () => {
   const {
-    totalCount,
-    setTotalCount,
+    // totalCount,
+    // setTotalCount,
     totalRight,
-    setTotalRight,
+    // setTotalRight,
     topic,
-    setTopic,
-    curntDiff,
-    setCurntDiff,
-    conRight,
-    setConRight,
-    conWrong,
-    setConWrong,
+    // setTopic,
+    // curntDiff,
+    // setCurntDiff,
+    // conRight,
+    // setConRight,
+    // conWrong,
+    // setConWrong,
     totalEasy,
-    setTotalEasy,
+    // setTotalEasy,
     correctEasy,
-    setCorrectEasy,
+    // setCorrectEasy,
     totalMedium,
-    setTotalMedium,
+    // setTotalMedium,
     correctMedium,
-    setCorrectMedium,
+    // setCorrectMedium,
     totalHard,
-    setTotalHard,
+    // setTotalHard,
     correctHard,
-    setCorrectHard,
-    question,
-    setQuestion,
-    answer,
-    setAnswer,
-    optionA,
-    setOptionA,
-    optionB,
-    setOptionB,
-    optionC,
-    setOptionC,
-    optionD,
-    setOptionD,
-    csvData, 
-    setCsvData
+    // setCorrectHard,
+    // question,
+    // setQuestion,
+    // answer,
+    // setAnswer,
+    // optionA,
+    // setOptionA,
+    // optionB,
+    // setOptionB,
+    // optionC,
+    // setOptionC,
+    // optionD,
+    // setOptionD,
+    csvData,
+    // setCsvData,
   } = DataState();
-  const WeightEasy = 0.2;    // 30% importance
-const WeightMedium = 0.4;  // 40% importance
-const WeightHard = 0.4;    // 30% importance
+  const WeightEasy = 0.2; // 30% importance
+  const WeightMedium = 0.4; // 40% importance
+  const WeightHard = 0.4; // 30% importance
 
-const Proficiency =
-  ((WeightEasy * correctEasy) +
-   (WeightMedium * correctMedium) +
-   (WeightHard * correctHard)) /
-  ((WeightEasy * totalEasy) +
-   (WeightMedium * totalMedium) +
-   (WeightHard * totalHard)) * 10;
+  const Proficiency =
+    ((WeightEasy * correctEasy +
+      WeightMedium * correctMedium +
+      WeightHard * correctHard) /
+      (WeightEasy * totalEasy +
+        WeightMedium * totalMedium +
+        WeightHard * totalHard)) *
+    10;
 
-   const downloadCsv = () => {
-    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
+  const downloadCsv = () => {
+    const blob = new Blob([csvData], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = 'data.csv';
+    link.download = "data.csv";
     link.click();
   };
-
 
   return (
     <div className="h-screen w-screen bg-[#1c292f] flex flex-col gap-16 justify-center ">
@@ -105,8 +105,12 @@ const Proficiency =
         </div>
       </div>
       <div className="text-3xl text-[#6bde3b] pl-10 self-start">
-        <p>Your Proficiency in {topic} is {Proficiency.toFixed(2)} out of 10.</p> 
-        <button  className="m-2 border p-3 rounded-lg" onClick={downloadCsv}>Download CSV</button>
+        <p>
+          Your Proficiency in {topic} is {Proficiency.toFixed(2)} out of 10.
+        </p>
+        <button className="m-2 border p-3 rounded-lg" onClick={downloadCsv}>
+          Download CSV
+        </button>
       </div>
     </div>
   );

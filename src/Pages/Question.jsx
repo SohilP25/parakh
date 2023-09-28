@@ -73,7 +73,7 @@ const Question = () => {
     totalRight,
     setTotalRight,
     topic,
-    setTopic,
+    // setTopic,
     curntDiff,
     setCurntDiff,
     conRight,
@@ -188,7 +188,7 @@ const Question = () => {
   return (
     // {/* { loading ? () : ()}
     <div className="h-screen w-screen bg-[#1c292f] flex flex-col gap-7 justify-center items-center">
-    <img src="./logo.png" alt="Logo" className="absolute top-0 left-2 w-48 h-48 m-4" />
+    {/* <img src="./logo.png" alt="Logo" className="absolute top-0 left-2 w-48 h-48 m-4" /> */}
     {loading ? (
       // Loading Screen
       <div className="flex flex-col justify-center items-center">
