@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const apiKey = process.env.REACT_API_KEY;
-const apiUrl = process.env.REACT_API_URL;
+const apiKey = process.env.REACT_APP_API_KEY;
+const apiUrl = process.env.REACT_APP_API_URL;
 
 async function Generator(difficulty,topic){
 
